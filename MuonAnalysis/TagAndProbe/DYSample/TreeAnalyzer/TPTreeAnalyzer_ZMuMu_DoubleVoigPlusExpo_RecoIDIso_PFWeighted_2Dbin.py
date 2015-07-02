@@ -79,21 +79,11 @@ process.TagProbeFitTreeAnalyzer = cms.EDAnalyzer("TagProbeFitTreeAnalyzer",
             EfficiencyCategoryAndState = cms.vstring("passingHLT_Mu17Mu8dzIsoVVL", "true", "dzPV_lower", "above", "dzPV_upper", "below", "passingTight", "true", "RelPFIso_WGT12", "below"),
             UnbinnedVariables = cms.vstring("mass"),
             BinnedVariables = cms.PSet(
-                pt = cms.vdouble(17, 30),
+                pt = cms.vdouble(10, 17, 30, 40, 50, 70, 250, 1000),
                 eta = cms.vdouble(-2.4, -2.1, -1.9, -1.5, -1.1, -0.9, -0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 0.9, 1.1, 1.5, 1.9, 2.1, 2.4),
             ),
             BinToPDFmap = cms.vstring("DoubleVoigPlusExpo")
-        ),
-
-        IDTight_PFIso = cms.PSet(
-            EfficiencyCategoryAndState = cms.vstring("passingHLT_Mu17Mu8dzIsoVVL", "true", "dzPV_lower", "above", "dzPV_upper", "below", "passingTight", "true", "RelPFIso12", "below"),
-            UnbinnedVariables = cms.vstring("mass"),
-            BinnedVariables = cms.PSet(
-                pt = cms.vdouble(50, 70),
-                eta = cms.vdouble(-2.4, -2.1, -1.9, -1.5, -1.1, -0.9, -0.7, -0.5, -0.3, -0.1, 0.1, 0.3, 0.5, 0.7, 0.9, 1.1, 1.5, 1.9, 2.1, 2.4),
-            ),
-            BinToPDFmap = cms.vstring("DoubleVoigPlusExpo")
-        ),        
+        ),  
     )
 )
 
